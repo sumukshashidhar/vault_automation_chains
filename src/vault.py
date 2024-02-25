@@ -10,6 +10,20 @@ class File:
         self.path = path
         pass
 
+    def get_file(self) -> str:
+        """
+        Read all the contents of the file and return it as a string
+        """
+        with open(self.path, "r") as file:
+            return file.read()
+
+    def write_file(self, content: str) -> None:
+        """
+        Write the content to the file
+        """
+        with open(self.path, "w") as file:
+            file.write(content)
+
 
 class Vault:
     """
